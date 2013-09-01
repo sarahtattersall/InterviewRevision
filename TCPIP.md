@@ -154,4 +154,21 @@ The OSI model is a conceptual model that characterises and standardises the inte
 7. __Application Layer__
     * Closest to the end user
     * Interacts with software applications. 
+    
+## DNS ##
+* Associates various information with domain names.
+* Translates domain names to numerical IP addresses
+
+
+### Domain Name Space ###
+* Consists of a tree of domain names.
+* Each node or leaf has zero+ recode. 
+* sub-divided into zones beginning at the root zone.
+
+### Address resolution ###
+1. A network host is configured with an initial cache of the known addresses of the root name servers.
+2. A query to one of the root servers to find the server authoritative for the top-level domain
+3. A query to the obtained TLD server for the address of a DNS server authoritative for the second-level domain
+4. Repetition of the previous step to process each domain name label in sequence, until the final step which returns the IP address.
+![image](http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/An_example_of_theoretical_DNS_recursion.svg/400px-An_example_of_theoretical_DNS_recursion.svg.png)
  
