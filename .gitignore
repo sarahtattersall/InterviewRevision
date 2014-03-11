@@ -1,0 +1,19 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Mac
+.DS_Store
+
+# Maven
+
+# Intellij
+.idea/
+*.iml
+*.iws
