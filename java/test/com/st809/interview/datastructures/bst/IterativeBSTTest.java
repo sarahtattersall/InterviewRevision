@@ -38,21 +38,21 @@ public class IterativeBSTTest {
 //    @Test
 //    public void correctGet() {
 //        for (int i = 1; i <= 10; i++) {
-//            assertEquals(new Integer(i), bst.get(i));
+//            assertEquals(new Integer(i), tree.get(i));
 //        }
 //    }
 
 //    @Test
 //    public void returnNullForItemNotInBST() {
-//        assertNull(bst.get(100));
+//        assertNull(tree.get(100));
 //    }
 //
 //
 //
 //    @Test
 //    public void itemNotInBSTAfterDelete() {
-//        bst.delete(5);
-//        assertNull(bst.get(5));
+//        tree.delete(5);
+//        assertNull(tree.get(5));
 //    }
 
 

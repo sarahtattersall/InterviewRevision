@@ -1,4 +1,4 @@
-package com.st809.interview.datastructures;
+package com.st809.interview.datastructures.bst;
 
 import com.st809.interview.datastructures.bst.RecursiveBST;
 import com.st809.interview.datastructures.bst.BSTNode;
