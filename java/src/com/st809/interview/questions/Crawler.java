@@ -1,4 +1,4 @@
-package questions;
+package com.st809.interview.questions;
 
 /**
  * I wrote a crawler that visits web pages, stores a few keywords in a database, and follows links to other web pages.

@@ -1,4 +1,4 @@
-package questions;
+package com.st809.interview.questions;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

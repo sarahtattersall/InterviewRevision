@@ -1,4 +1,4 @@
-package questions;
+package com.st809.interview.questions;
 
 import com.st809.interview.datastructures.node.Node;
 
