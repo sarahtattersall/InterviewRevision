@@ -70,4 +70,16 @@ public class SameTreeTest {
         assertFalse(SameTree.isSameTree(p, q));
     }
 
+    @Test
+    public void notSameOppositeChild() {
+        TreeNode p = new TreeNode(10);
+        p.left = new TreeNode(2);
+
+
+        TreeNode q = new TreeNode(10);
+        q.right = new TreeNode(2);
+
+        assertFalse(SameTree.isSameTree(p, q));
+    }
+
 }

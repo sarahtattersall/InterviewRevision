@@ -47,16 +47,21 @@ public class SameTree {
             }
 
             if (pCurrent.left != null) {
+                if (qCurrent.left == null) {
+                    return false;
+                }
                 pStack.push(pCurrent.left);
-            }
-            if (pCurrent.right != null) {
-                pStack.push(pCurrent.right);
-            }
-            if (qCurrent.left != null) {
                 qStack.push(qCurrent.left);
             }
-            if (qCurrent.right != null) {
+            if (pCurrent.right != null) {
+                if (qCurrent.right == null) {
+                    return false;
+                }
+                pStack.push(pCurrent.right);
                 qStack.push(qCurrent.right);
+            }
+            if ((pCurrent.left == null && qCurrent.left != null) || (pCurrent.right == null && qCurrent.right != null)) {
+                return false;
             }
 
         }
