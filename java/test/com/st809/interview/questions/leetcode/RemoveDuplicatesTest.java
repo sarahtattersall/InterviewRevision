@@ -14,7 +14,7 @@ public class RemoveDuplicatesTest {
         node.next.next = new ListNode(2);
 
         int[] expected = {1, 2};
-        verifyExpected(RemoveDuplicates.deleteDuplicates(node), expected);
+        Utils.verifyLinkedListSameAsExpected(RemoveDuplicates.deleteDuplicates(node), expected);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class RemoveDuplicatesTest {
         node.next.next = new ListNode(3);
 
         int[] expected = {1, 2, 3};
-        verifyExpected(RemoveDuplicates.deleteDuplicates(node), expected);
+        Utils.verifyLinkedListSameAsExpected(RemoveDuplicates.deleteDuplicates(node), expected);
     }
 
     @Test
@@ -36,20 +36,8 @@ public class RemoveDuplicatesTest {
         node.next.next.next.next = new ListNode(3);
 
         int[] expected = {1, 2, 3};
-        verifyExpected(RemoveDuplicates.deleteDuplicates(node), expected);
+        Utils.verifyLinkedListSameAsExpected(RemoveDuplicates.deleteDuplicates(node), expected);
     }
 
-    private void verifyExpected(ListNode head, int[] expected) {
-        ListNode node = head;
-        int index = 0;
-        while (node != null) {
 
-            assertTrue(index < expected.length);
-            assertEquals(expected[index], node.val);
-            index++;
-            node = node.next;
-        }
-
-        assertEquals(index, expected.length);
-    }
 }
