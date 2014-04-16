@@ -92,11 +92,11 @@ public class Sort {
      * @param hi
      * @return pivot values new index
      */
-    private static int partition(List<Integer> values, int lo, int hi) {
+    public static int partition(List<Integer> values, int lo, int hi) {
         int pivotValue = values.get(hi);
         int i = lo - 1;
         for (int j = lo; j < hi; j++) {
-            if (values.get(j) < pivotValue) {
+            if (values.get(j) <= pivotValue) {
                 i++;
                 swap(values, i, j);
             }
@@ -116,7 +116,7 @@ public class Sort {
      * @param hi
      * @return partitioned array
      */
-    private static int randomPartition(List<Integer> values, int lo, int hi) {
+    public static int randomPartition(List<Integer> values, int lo, int hi) {
         int pivot = randomInt(lo, hi);
         swap(values, pivot, hi);
         return partition(values, lo, hi);

@@ -94,7 +94,7 @@ public class IterativeBSTTest {
         return new NodeMatcher<Integer, Integer>(key, value);
     }
 
-    class NodeMatcher<Key, Value> extends ArgumentMatcher<BSTNode<Key, Value>> {
+    class NodeMatcher<Key extends Comparable<Key>, Value> extends ArgumentMatcher<Node<Key, Value>> {
         Key key;
 
         NodeMatcher(Key key, Value value) {

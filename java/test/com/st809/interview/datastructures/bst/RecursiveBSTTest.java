@@ -1,8 +1,5 @@
 package com.st809.interview.datastructures.bst;
 
-import com.st809.interview.datastructures.bst.RecursiveBST;
-import com.st809.interview.datastructures.bst.BSTNode;
-import com.st809.interview.datastructures.bst.NodeVisitor;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -152,7 +149,7 @@ public class RecursiveBSTTest {
         return new NodeMatcher<Integer, Integer>(key, value);
     }
 
-    class NodeMatcher<Key, Value> extends ArgumentMatcher<BSTNode<Key, Value>> {
+    class NodeMatcher<Key extends Comparable<Key>, Value> extends ArgumentMatcher<Node<Key, Value>> {
         Key key;
 
         NodeMatcher(Key key, Value value) {

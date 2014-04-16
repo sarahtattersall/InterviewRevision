@@ -51,7 +51,7 @@ public class IterativeBST<Key extends Comparable<Key>, Value> implements BST<Key
         if (root == null) {
             return;
         }
-        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<BSTNode<Key, Value>>();
+        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<>();
         BSTNode<Key, Value> node = root;
         while(!stack.isEmpty() || node != null) {
             if (node != null) {
@@ -72,7 +72,7 @@ public class IterativeBST<Key extends Comparable<Key>, Value> implements BST<Key
         if (root == null) {
             return;
         }
-        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<BSTNode<Key, Value>>();
+        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
@@ -92,8 +92,8 @@ public class IterativeBST<Key extends Comparable<Key>, Value> implements BST<Key
         if (root == null) {
             return;
         }
-        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<BSTNode<Key, Value>>();
-        Set<BSTNode<Key, Value>> seen = new HashSet<BSTNode<Key, Value>>();
+        Deque<BSTNode<Key, Value>> stack = new ArrayDeque<>();
+        Set<Node<Key, Value>> seen = new HashSet<>();
 
         stack.push(root);
         while(!stack.isEmpty()) {

@@ -83,7 +83,7 @@ public class ArrayHeap implements Heap {
      * and maintains the invariant
      * At termination i = 0, each node 1, 2, ...n is the root of a max heap.
      *
-     * Runtime is O(nlogn)
+     * Runtime is O(n)
      */
     private void buildMaxHeap() {
         for (int i = getSize()/2 - 1; i >= 0; i--) {

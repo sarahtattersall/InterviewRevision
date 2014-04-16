@@ -1,6 +1,6 @@
 package com.st809.interview.datastructures.bst;
 
-public interface NodeVisitor<Key, Value> {
+public interface NodeVisitor<Key extends Comparable<Key>, Value> {
 
-    void visit(BSTNode<Key, Value> node);
+    void visit(Node<Key, Value> node);
 }

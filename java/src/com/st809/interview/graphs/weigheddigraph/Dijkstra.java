@@ -9,12 +9,12 @@ import java.util.PriorityQueue;
 
 public class Dijkstra implements ShortestPath {
     /**
-     * Distance from source to v
+     * Smallest recorded distance from source to v
      */
     private double[] distTo;
 
     /**
-     * Edge that leads to v
+     * Edge that leads to v with the smallest weight
      */
     private DirectedEdge[] edgeTo;
 
