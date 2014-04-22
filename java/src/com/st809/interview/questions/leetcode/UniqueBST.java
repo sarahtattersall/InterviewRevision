@@ -47,4 +47,8 @@ public class UniqueBST {
         }
         return catalanNumbers[n];
     }
+
+    public static void main(String[] args) {
+        numTrees(3);
+    }
 }
