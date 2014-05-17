@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.PriorityQueue;
 
 /**
- * The eager version of Prim’s algorithm uses ex- tra space proportional to V and time proportional to
+ * The eager version of Prim’s algorithm uses extra space proportional to V and time proportional to
  * E log V (in the worst case) to compute the MST of a connected edge- weighted graph with E edges and V vertices.
  */
 public class PrimMST implements MST {

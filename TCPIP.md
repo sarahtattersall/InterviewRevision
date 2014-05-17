@@ -1,4 +1,5 @@
 # TCP/IP Networking (OSI stack, DNS etc): #
+[link](http://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/)
 
 ## Intro ##
 
@@ -63,13 +64,18 @@ This layer constitutes the networking regime between two network hosts, either o
 
 It establishes a __basic data channel__ that an application uses in it's task-specific data exchange. 
 
+Two different protocols that could be used are:
+
+* **TCP** - used when a reliable connection is required (that is data is not lost e.g. downloading a file). The date is divided into chunks and then these are passed onto the network. Timeouts are set if a packet is not received in a reasonable time. 
+* **UDP** - used when there is an unreliable connection (e.g. video streaming). UDP does not take any extra measures to ensure the data sent is received. 
+
 ### Internet Layer ###
 This layer exchanges datagrams across network boundaries. This layer defines the addressing and routing structures used for TCP/IP. The primary protocol is the Internet Protocol which defines IP addresses.  Its function in routing is to transport datagrams to the next IP router that has the connectivity to a network closer to the final destination.
 
 The IP has two basic functions:
 
 1. __Host addressing and identification__ which is accomplished with a hierarchical IP addressing system.
-2. __Packet Routing__ is the basic task of sending packets of data from source to destination by forwarding them to the next router closeser to the final destination.
+2. __Packet Routing__ is the basic task of sending packets of data from source to destination by forwarding them to the next router closer to the final destination.
 
 #### IP Address ####
 

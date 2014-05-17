@@ -37,25 +37,25 @@ public class Sort {
     }
 
     private static void merge(List<Integer> values, int lo, int middle, int hi) {
-        Integer[] auxillary = Arrays.copyOfRange(values.toArray(new Integer[values.size()]), lo, hi + 1);
+        Integer[] auxiliary = Arrays.copyOfRange(values.toArray(new Integer[values.size()]), lo, hi + 1);
 
         int i = 0; // Points to start of left list
         int j = middle - lo + 1; // Points to start of right list
         int k = lo; //Points to actual position in values
 
         while (i <= middle - lo && j <= hi - lo) {
-            if (auxillary[i] <= auxillary[j]) {
-                values.set(k, auxillary[i]);
+            if (auxiliary[i] <= auxiliary[j]) {
+                values.set(k, auxiliary[i]);
                 i++;
             } else {
-                values.set(k, auxillary[j]);
+                values.set(k, auxiliary[j]);
                 j++;
             }
             k++;
         }
 
         while (i <= middle - lo) {
-            values.set(k, auxillary[i]);
+            values.set(k, auxiliary[i]);
             k++;
             i++;
         }

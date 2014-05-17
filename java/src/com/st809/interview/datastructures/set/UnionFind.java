@@ -20,6 +20,8 @@ public class UnionFind {
     /**
      * Initialise count set with integer names 0..N-1
      *
+     * Each vertex is its own component
+     *
      * @param N no of sets
      */
     public UnionFind(int N) {

@@ -93,23 +93,51 @@ public class IterativeBST<Key extends Comparable<Key>, Value> implements BST<Key
             return;
         }
         Deque<BSTNode<Key, Value>> stack = new ArrayDeque<>();
-        Set<Node<Key, Value>> seen = new HashSet<>();
-
         stack.push(root);
+        BSTNode<Key, Value> prev = null;
         while(!stack.isEmpty()) {
-           BSTNode<Key, Value> node = stack.peek();
-           if (seen.contains(node)) {
-               visitor.visit(node);
-               stack.pop();
-           } else {
-               if (node.right != null) {
-                   stack.push(node.right);
-               }
-               if (node.left != null) {
-                   stack.push(node.left);
-               }
-               seen.add(node);
-           }
+            BSTNode<Key, Value> current = stack.peek();
+            if (prev == null || isParent(prev, current)) {
+                if (current.left != null) {
+                    stack.push(current.left);
+                }
+                else if (current.right != null) {
+                    stack.push(current.right);
+                }
+            } else if (prev.equals(current.left)) {
+                if (current.right != null) {
+                    stack.push(current.right);
+                }
+            } else {
+                visitor.visit(current);
+                //Process current here
+                stack.pop();
+            }
+            prev = current;
         }
+//        Set<Node<Key, Value>> seen = new HashSet<>();
+//
+//        stack.push(root);
+//        while(!stack.isEmpty()) {
+//           BSTNode<Key, Value> node = stack.peek();
+//           if (seen.contains(node)) {
+//               visitor.visit(node);
+//               stack.pop();
+//           } else {
+//               if (node.right != null) {
+//                   stack.push(node.right);
+//               }
+//               if (node.left != null) {
+//                   stack.push(node.left);
+//               }
+//               seen.add(node);
+//           }
+//        }
+
+
+    }
+
+    private boolean isParent(BSTNode<Key, Value> prev, BSTNode<Key, Value> current) {
+        return current.equals(prev.left) || current.equals(prev.right);
     }
 }

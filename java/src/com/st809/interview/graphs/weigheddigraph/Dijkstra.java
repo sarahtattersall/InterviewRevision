@@ -70,7 +70,7 @@ public class Dijkstra implements ShortestPath {
     /**
      * Edge relaxation
      * <p/>
-     * To relax an edge v->w means to test if the best know way
+     * To relax an edge v->w means to test if the best known way
      * from the source to w is to go from the source to v and then take the edge from v to w.
      * If it is we update the data structures to indicate it to be the best case
      */
